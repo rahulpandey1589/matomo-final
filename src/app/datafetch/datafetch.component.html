@@ -1,0 +1,45 @@
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="col-sm-8">
+            <input class="form-control" type="text" [(ngModel)]="userId" placeholder="Please enter user Id" />
+        </div>
+
+        <div class="col-sm-4">
+            <button class="btn btn-primary" (click)="fetchData()">Fetch Data From API </button>
+        </div>
+    </div>
+  <br />
+  <br />
+
+    <div class="container">
+        <div>
+            <label><b>First Name : </b></label>
+            <label>{{userObject?.data?.first_name | uppercase}} </label>
+
+        </div>
+        <div>
+            <label><b>Last Name : </b></label>
+            <label>{{userObject?.data?.last_name | lowercase}}</label>
+
+        </div>
+
+        <div>
+            <label><b>Email Address : </b></label>
+            <label>{{userObject?.data?.email}}</label>
+
+        </div>
+        <div>
+            <label><b>Avatar:</b></label>
+            <img [src]="userObject?.data?.avatar" />
+        </div>
+        <div>
+            <label><b>Salary:</b></label>
+            <label>{{userObject?.data?.salary | square}}</label>
+        </div>
+    </div>
+
+
+</div>

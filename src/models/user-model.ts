@@ -9,6 +9,7 @@ export interface UserObject {
     first_name: string
     last_name: string
     avatar: string
+    salary: number;
   }
   
   export interface Support {

@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ResetUserComponent } from './admin/reset-user/reset-user.component';
 import { DisableUserComponent } from './admin/disable-user/disable-user.component';
 import { EditparentComponent } from './editparent/editparent.component';
+import { DatafetchComponent } from './datafetch/datafetch.component';
 
 const routes: Routes = [
   { path: '', component: HomecomponentComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'disable-user', component: DisableUserComponent }
     ]
   },
+  {path:'fetch', component:DatafetchComponent},
   { path: '**', component: NotFoundComponent }
 ];
 

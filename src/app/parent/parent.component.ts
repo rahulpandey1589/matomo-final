@@ -18,8 +18,9 @@ export class ParentComponent {
 
   constructor(
     private _dataPassing: DatapassingService,
+
     private router: Router) {
-    console.log(this.valueFromChild);
+   
     this.disableButton = true;
     setTimeout(() => {
       this.displayH1 = true;

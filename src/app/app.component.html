@@ -1,56 +1,28 @@
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home Component</a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/parent">Parent Component</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link" routerLink="/directive">Directive Component</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link" routerLink="/employee">Employee Component</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link" routerLink="/department">Department Component</a>
+    </li>
+    <li class="nav-item">
+        <a  class="nav-link" routerLink="/fetch">Call API</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['parent','1']" [queryParams]="{employeeId:1}" >Edit Parent</a>
+    </li>
+  </ul>
 
-<nav>
-    <ul>
-        <li>
-            <a routerLink="/parent">Parent Component</a>
-        </li>
-        <li>
-            <a routerLink="/directive">Directive Component</a>
-        </li>
-        <li>
-            <a routerLink="/employee">Employee Component</a>
-        </li>
-        <li>
-            <a routerLink="/department">Department Component</a>
-        </li>
-        <li>
-            <a [routerLink]="['parent','1']" [queryParams]="{employeeId:1}" >Edit Parent</a>
-        </li>
-    </ul>
-</nav>
-
-<input type="text" [(ngModel)]="userId" placeholder="Please enter user Id" />
-
-<button (click)="fetchData()">Fetch Data From API </button>
-
-<br />
-<br />
-<br />
-
-<div>
-    <label><b>First Name : </b></label>
-    <label>{{userObject?.data?.first_name}}</label>
-
-</div>
-
-
-<div>
-    <label><b>Last Name : </b></label>
-    <label>{{userObject?.data?.last_name}}</label>
-
-</div>
-
-<div>
-    <label><b>Email Address : </b></label>
-    <label>{{userObject?.data?.email}}</label>
-
-</div>
-
-
-<div>
-    <label><b>Avatar:</b></label>
-    <img [src]="userObject?.data?.avatar" />
-</div>
 
 
 <router-outlet></router-outlet>

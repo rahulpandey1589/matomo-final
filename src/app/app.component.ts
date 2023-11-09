@@ -25,14 +25,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fetchData(){
-    this.dataPassingService.getUser(parseInt(this.userId)).subscribe(((data:UserObject) =>{
-       this.userObject = data;
-    }),
-    error =>{
-          console.error('API Not respoding');
-    });
-  }
 
 
 }

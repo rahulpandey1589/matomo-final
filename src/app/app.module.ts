@@ -20,6 +20,9 @@ import { AdminComponent } from './admin/admin.component';
 import { ResetUserComponent } from './admin/reset-user/reset-user.component';
 import { DisableUserComponent } from './admin/disable-user/disable-user.component';
 import { EditparentComponent } from './editparent/editparent.component';
+import { DatafetchComponent } from './datafetch/datafetch.component';
+import { MyCustomPipePipe } from './pipes/my-custom-pipe.pipe';
+import { SquarePipe } from './pipes/square.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { EditparentComponent } from './editparent/editparent.component';
     AdminComponent,
     ResetUserComponent,
     DisableUserComponent,
-    EditparentComponent
+    EditparentComponent,
+    DatafetchComponent,
+    MyCustomPipePipe,
+    SquarePipe
   ],
   imports: [
     BrowserModule,
