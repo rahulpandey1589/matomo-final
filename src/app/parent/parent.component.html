@@ -1,0 +1,25 @@
+<h1 *ngIf="displayH1"> Parent Component Loaded!!!</h1>
+<label>Pass Data from Parent to Child</label>
+<input type="text" [(ngModel)]="fullName" />
+<br />
+<br />
+<br />
+
+<label></label>
+
+
+<button [disabled]="disableButton" >Click me to disable</button>
+
+<button (click)="passValueToChildClick()"  >Pass Value from Parent to Child</button>
+<h4> Data Coming from Child Component : {{valueFromChild}} </h4>
+
+
+<ul>Color Name</ul>
+<li *ngFor="let data of colorName" >{{data}}</li>
+
+ <button (click)="navigateToEditParentComponent()">Navigate to Edit Parent</button>
+
+
+<hr>
+
+<app-child (childToParent)="processDataFromChildComponent($event)" [valueFromParent]="fullName"></app-child>

@@ -1,0 +1,35 @@
+
+<h2>Learning Directives in Angular</h2>
+
+<ul>
+    <li><b>Component Directive : </b> - It modifies the DOM</li>
+    <li><b>Attibute Directive : </b></li>
+    <li><b>Structural Directive : </b> *ngIf, *ngFor, *ngSwitch</li>
+</ul>
+
+<h3>Structural Directive Learning </h3>
+<hr>
+
+<div *ngIf="displayFirstNameSection">
+    <label>First Name : </label>
+    <input type="text" placeholder="Please enter firstname" />
+</div>
+<br/>
+<div>
+    <label>Last Name :</label>
+    <input type="text" placeholder="Please enter lastName" />
+</div>
+
+<div>
+  <ul>Color Name:</ul>
+  <li *ngFor="let color of colorName">{{color}}</li>
+
+</div>
+
+
+<h3>Attribute Directive Learning </h3>
+<hr>
+<p appHoverOver>I want to highlight the text</p>
+
+
+<label appHoverOver>I want to highlight the text</label>
