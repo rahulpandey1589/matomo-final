@@ -9,6 +9,8 @@ import { HomecomponentComponent } from './homecomponent/homecomponent.component'
 import { EditparentComponent } from './editparent/editparent.component';
 import { DatafetchComponent } from './datafetch/datafetch.component';
 import { FetchMultipleComponent } from './fetch-multiple/fetch-multiple.component';
+import { AuthGuard } from './auth/auth.guard';
+import { deactivateGuard } from './auth/deactivate.guard';
 
 
 const routes: Routes = [
@@ -21,7 +23,10 @@ const routes: Routes = [
   { path: 'fetch', component: DatafetchComponent },
   { path: 'fetch-all', component: FetchMultipleComponent },
   {
-    path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+    path: 'admin', 
+    canActivate:[AuthGuard],
+    canDeactivate:[deactivateGuard],
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   { path: '**', component: NotFoundComponent }
 ];

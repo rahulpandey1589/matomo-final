@@ -15,14 +15,14 @@ export class AppComponent implements OnInit {
   title = 'hello-world';
   userObject? : UserObject;
   userId: string= "";
+  isAdmin: boolean = false;
 
   constructor(private dataPassingService: DatapassingService){
-
   }
-
-
+  
 
   ngOnInit(): void {
+    this.isAdmin = false;
   }
 
 
