@@ -16,9 +16,5 @@ export class EditparentComponent {
        this.employeeId = this.activatedRoute.snapshot.queryParamMap.get("employeeId");
 
        let message= `The parent is is ${this.parentId} abd employeeId is ${this.employeeId}`;
-
-       alert(message);
-
-      
     }
 }

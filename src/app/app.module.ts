@@ -16,13 +16,11 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomecomponentComponent } from './homecomponent/homecomponent.component';
-import { AdminComponent } from './admin/admin.component';
-import { ResetUserComponent } from './admin/reset-user/reset-user.component';
-import { DisableUserComponent } from './admin/disable-user/disable-user.component';
 import { EditparentComponent } from './editparent/editparent.component';
 import { DatafetchComponent } from './datafetch/datafetch.component';
 import { MyCustomPipePipe } from './pipes/my-custom-pipe.pipe';
 import { SquarePipe } from './pipes/square.pipe';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,6 @@ import { SquarePipe } from './pipes/square.pipe';
     DepartmentComponent,
     NotFoundComponent,
     HomecomponentComponent,
-    AdminComponent,
-    ResetUserComponent,
-    DisableUserComponent,
     EditparentComponent,
     DatafetchComponent,
     MyCustomPipePipe,
@@ -47,7 +42,8 @@ import { SquarePipe } from './pipes/square.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule
   ],
   providers: [DatapassingService],
   bootstrap: [AppComponent]

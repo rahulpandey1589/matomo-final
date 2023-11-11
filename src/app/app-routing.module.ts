@@ -6,11 +6,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomecomponentComponent } from './homecomponent/homecomponent.component';
-import { AdminComponent } from './admin/admin.component';
-import { ResetUserComponent } from './admin/reset-user/reset-user.component';
-import { DisableUserComponent } from './admin/disable-user/disable-user.component';
 import { EditparentComponent } from './editparent/editparent.component';
 import { DatafetchComponent } from './datafetch/datafetch.component';
+
 
 const routes: Routes = [
   { path: '', component: HomecomponentComponent },
@@ -19,14 +17,10 @@ const routes: Routes = [
   { path: 'directive', component: DirectivesexampleComponent },
   { path: 'employee', component: EmployeeComponent },
   { path: 'department', component: DepartmentComponent },
+  { path: 'fetch', component: DatafetchComponent },
   {
-    path: 'admin', component: AdminComponent,
-    children: [
-      { path: 'reset-user', component: ResetUserComponent },
-      { path: 'disable-user', component: DisableUserComponent }
-    ]
+    path:'admin',loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
-  {path:'fetch', component:DatafetchComponent},
   { path: '**', component: NotFoundComponent }
 ];
 
