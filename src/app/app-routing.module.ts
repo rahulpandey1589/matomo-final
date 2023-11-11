@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomecomponentComponent } from './homecomponent/homecomponent.component';
 import { EditparentComponent } from './editparent/editparent.component';
 import { DatafetchComponent } from './datafetch/datafetch.component';
+import { FetchMultipleComponent } from './fetch-multiple/fetch-multiple.component';
 
 
 const routes: Routes = [
@@ -18,8 +19,9 @@ const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
   { path: 'department', component: DepartmentComponent },
   { path: 'fetch', component: DatafetchComponent },
+  { path: 'fetch-all', component: FetchMultipleComponent },
   {
-    path:'admin',loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+    path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   { path: '**', component: NotFoundComponent }
 ];

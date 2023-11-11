@@ -1,0 +1,24 @@
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Avatar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let records of employeeList">
+              <td>{{records.first_name}}</td>
+              <td>{{records.last_name}}</td>
+              <td>{{records.email}}</td>
+              <td>
+                <img [src]="records.avatar" alt="No Image Displayed" />
+              </td>
+            </tr>
+          </tbody>
+    </table>
+
+<!-- </div> -->

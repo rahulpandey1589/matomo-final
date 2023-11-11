@@ -21,6 +21,7 @@ import { DatafetchComponent } from './datafetch/datafetch.component';
 import { MyCustomPipePipe } from './pipes/my-custom-pipe.pipe';
 import { SquarePipe } from './pipes/square.pipe';
 import { AdminModule } from './admin/admin.module';
+import { FetchMultipleComponent } from './fetch-multiple/fetch-multiple.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminModule } from './admin/admin.module';
     EditparentComponent,
     DatafetchComponent,
     MyCustomPipePipe,
-    SquarePipe
+    SquarePipe,
+    FetchMultipleComponent
   ],
   imports: [
     BrowserModule,
