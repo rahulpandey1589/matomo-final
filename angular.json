@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hello-world:build:production"
+              "buildTarget": "hello-world:build:production"
             },
             "development": {
-              "browserTarget": "hello-world:build:development"
+              "buildTarget": "hello-world:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hello-world:build"
+            "buildTarget": "hello-world:build"
           }
         },
         "test": {

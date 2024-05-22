@@ -22,6 +22,8 @@ import { MyCustomPipePipe } from './pipes/my-custom-pipe.pipe';
 import { SquarePipe } from './pipes/square.pipe';
 import { AdminModule } from './admin/admin.module';
 import { FetchMultipleComponent } from './fetch-multiple/fetch-multiple.component';
+import { provideMatomo } from 'ngx-matomo-client';
+import { withRouter } from 'ngx-matomo-client';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { FetchMultipleComponent } from './fetch-multiple/fetch-multiple.componen
     HttpClientModule,
     AdminModule
   ],
-  providers: [DatapassingService],
+  providers: [DatapassingService, provideMatomo({ trackerUrl: 'https://diversityapps.matomo.cloud/matomo.php', siteId: '3', scriptUrl: 'https://cdn.matomo.cloud/diversityapps.matomo.cloud/matomo.js' }, withRouter())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
