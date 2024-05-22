@@ -9,6 +9,9 @@
     "test": "ng test",
     "test-angular": "ng serve"
   },
+  "engines": {
+    "node": "^18.13.0 || ^20.9.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.9",
